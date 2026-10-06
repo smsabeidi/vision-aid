@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "VisionAid",
+    "slug": "vision-aid",
+    "version": "0.1.0",
+    "icon": "./assets/icon.png",
+    "orientation": "portrait",
+    "scheme": "visionaid",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.visionaid.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "VisionAid uses the camera to describe scenes and read text you choose to analyze.",
+        "NSPhotoLibraryUsageDescription": "VisionAid can analyze a photo you explicitly select."
+      }
+    },
+    "android": {
+      "package": "com.visionaid.app",
+      "permissions": [
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "server",
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow VisionAid to use the camera for visual assistance."
+        }
+      ],
+      "expo-sqlite",
+      "expo-status-bar",
+      "expo-image"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
